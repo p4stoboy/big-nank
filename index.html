@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>BIG NANK</title>
+    <!--    load array of image paths from images.js (this imports image_array)-->
+    <script src="./images.js"></script>
+    <script>
+        // function to set a random image from image_array against the image element with id "image_el"
+        function setRandomImage() {
+            const image_element = document.getElementById('image_el');
+            image_element.src = image_array[Math.floor(Math.random() * image_array.length)];
+        }
+    </script>
+</head>
+<!--set a random image when the page loads-->
+<body onLoad="setRandomImage()">
+<!--div to hold image element-->
+<div style="width: 100%; min-height: 50%; text-align: center;" id="image_div">
+    <!--    image element with id "image_el" referred to by setRandomImage function-->
+    <img src="" id="image_el">
+</div>
+<div style="width: 100%; text-align: center;" id="button_div">
+    <!--    set a random image when button is pressed-->
+    <button onClick="setRandomImage()">NEW NANK</button>
+</div>
+</body>
+</html>
